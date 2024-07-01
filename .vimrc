@@ -1,9 +1,13 @@
 set relativenumber
+set nobackup
+set ignorecase
+set cursorline
+set showmatch
+set hlsearch
+set cursorcolumn
 syntax on
-
 call plug#begin()
 
-Plug 'wojciechkepka/vim-github-dark'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'prabirshrestha/vim-lsp'
@@ -14,6 +18,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -55,7 +60,7 @@ augroup lsp_install
 	autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
-colorscheme ghdark
+colorscheme habamax 
 
 nnoremap <C-p> :Files<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
