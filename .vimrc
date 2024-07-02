@@ -2,6 +2,7 @@ set relativenumber
 set expandtab
 set shiftwidth=4
 set tabstop=4
+set number relativenumber 
 set nobackup
 set ignorecase
 set cursorline
@@ -68,8 +69,9 @@ augroup lsp_install
 augroup END
 
 let g:lsp_diagnostics_enabled = 0
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = '=>' 
+let g:ale_sign_warning = '=>'
+let g:codeium_disable_bindings = 1
 
 
 colorscheme habamax 
@@ -77,3 +79,6 @@ nnoremap <C-j> :term<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :highlight ALEVirtualTextError ctermbg=darkred<CR>
+imap <script><silent><nowait><expr> <C-g> codeium#Accept()
+imap <C-x>   <Cmd>call codeium#Clear()<CR>
+
