@@ -74,7 +74,7 @@ let g:ale_sign_warning = '=>'
 let g:codeium_disable_bindings = 1
 
 
-colorscheme habamax 
+colorscheme slate 
 nnoremap <C-j> :term<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
