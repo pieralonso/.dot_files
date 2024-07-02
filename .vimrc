@@ -1,4 +1,5 @@
 set relativenumber
+set tabstop=4
 set nobackup
 set ignorecase
 set cursorline
@@ -6,11 +7,13 @@ set showmatch
 set hlsearch
 set cursorcolumn
 syntax on
+
 call plug#begin()
 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -19,6 +22,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -60,7 +64,12 @@ augroup lsp_install
 	autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
-colorscheme habamax 
+let g:lsp_diagnostics_enabled = 0
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 
+
+colorscheme habamax 
 nnoremap <C-p> :Files<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-l> :highlight ALEVirtualTextError ctermbg=darkred<CR>
