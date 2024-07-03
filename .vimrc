@@ -1,5 +1,5 @@
-set relativenumber
 set expandtab
+set colorcolumn=80
 set shiftwidth=4
 set tabstop=4
 set number relativenumber 
@@ -18,8 +18,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'prettier/vim-prettier'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'junegunn/fzf.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -80,6 +80,7 @@ let g:airline_theme='onedark'
 colorscheme habamax 
 nnoremap <C-j> :term<CR>
 nnoremap <C-p> :Files<CR>
+nnoremap <C-s> :w<CR>
 nnoremap <C-h> :noh<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :highlight ALEVirtualTextError ctermbg=darkred<CR>
