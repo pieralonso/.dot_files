@@ -14,6 +14,8 @@ syntax on
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'terryma/vim-multiple-cursors'
@@ -72,11 +74,13 @@ let g:lsp_diagnostics_enabled = 0
 let g:ale_sign_error = '=>' 
 let g:ale_sign_warning = '=>'
 let g:codeium_disable_bindings = 1
+let g:airline_theme='onedark'
 
 
-colorscheme habamax
+colorscheme habamax 
 nnoremap <C-j> :term<CR>
 nnoremap <C-p> :Files<CR>
+nnoremap <C-h> :noh<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :highlight ALEVirtualTextError ctermbg=darkred<CR>
 imap <script><silent><nowait><expr> <C-g> codeium#Accept()
