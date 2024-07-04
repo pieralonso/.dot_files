@@ -10,7 +10,6 @@ set cursorline
 set showmatch
 set hlsearch
 set cursorcolumn
-highlight ColorColumn ctermbg=7
 syntax on
 
 call plug#begin()
