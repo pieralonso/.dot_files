@@ -15,6 +15,7 @@ syntax on
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline'
 Plug 'joshdick/onedark.vim'
@@ -82,8 +83,6 @@ let g:gh_color = "soft"
 colorscheme habamax 
 nnoremap <C-j> :term<CR>
 nnoremap <C-p> :Files<CR>
-nnoremap <C-s> :w<CR>
-nnoremap <C-h> :noh<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :highlight ALEVirtualTextError ctermbg=darkred<CR>
 imap <script><silent><nowait><expr> <C-g> codeium#Accept()
