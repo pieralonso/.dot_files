@@ -1,3 +1,4 @@
+let mapleader = " "
 set expandtab
 set autoindent
 set colorcolumn=80
@@ -9,7 +10,6 @@ set ignorecase
 set cursorline
 set showmatch
 set hlsearch
-set cursorcolumn
 syntax on
 
 call plug#begin()
@@ -19,11 +19,9 @@ Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline'
 Plug 'joshdick/onedark.vim'
-Plug 'tpope/vim-fugitive'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prettier/vim-prettier'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'junegunn/fzf.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -77,14 +75,11 @@ let g:ale_sign_error = '=>'
 let g:ale_sign_warning = '=>'
 let g:codeium_disable_bindings = 1
 let g:airline_theme="onedark"
-let g:gh_color = "soft"
 
 
 colorscheme habamax 
-nnoremap <C-j> :term<CR>
-nnoremap <C-p> :Files<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-l> :highlight ALEVirtualTextError ctermbg=darkred<CR>
-imap <script><silent><nowait><expr> <C-g> codeium#Accept()
-imap <C-x>   <Cmd>call codeium#Clear()<CR>
+nnoremap <leader>j :term<CR>
+nnoremap <leader>p :Files<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>l :highlight ALEVirtualTextError ctermbg=darkred<CR>
 
