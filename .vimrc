@@ -1,13 +1,11 @@
 let mapleader = " "
 set expandtab
 set autoindent
-set colorcolumn=108
 set shiftwidth=4
 set tabstop=4
 set number relativenumber 
 set nobackup
 set ignorecase
-set cursorline
 set showmatch
 set hlsearch
 syntax on
@@ -18,6 +16,7 @@ syntax on
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'joshdick/onedark.vim'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
