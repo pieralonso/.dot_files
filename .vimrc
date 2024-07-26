@@ -3,7 +3,7 @@ set expandtab
 set autoindent
 set shiftwidth=4
 set tabstop=4
-set number relativenumber 
+set number relativenumber
 set nobackup
 set ignorecase
 set showmatch
@@ -17,7 +17,6 @@ call plug#begin()
 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'akiicat/vim-github-theme'
 Plug 'joshdick/onedark.vim'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -74,23 +73,23 @@ augroup lsp_install
 augroup END
 
 let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_highlights_enabled = 1 
+let g:lsp_diagnostics_highlights_enabled = 1
 let g:lsp_diagnostics_highlights_insert_mode_enabled = 1
 let g:lsp_diagnostics_virtual_text_insert_mode_enabled = 1
 let g:lsp_diagnostics_virtual_text_align = "right"
 let g:lsp_diagnostics_virtual_text_prefix = "⚠  "
 
-" let g:ale_sign_error = '✖' 
+" let g:ale_sign_error = '✖'
 " let g:ale_sign_warning = '⚠️ '
 let g:airline_theme='onedark'
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-colorscheme github_dark_dimmed
+colorscheme habamax
 hi Normal guibg=NONE ctermbg=NONE
 nnoremap <leader>j :term<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>h :noh<CR>
 "nnoremap <leader>l :highlight ALEVirtualTextError ctermbg=darkred<CR>
-
