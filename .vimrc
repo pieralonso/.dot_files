@@ -1,4 +1,6 @@
 let mapleader = " "
+set cursorcolumn
+set cursorline
 set expandtab
 set autoindent
 set shiftwidth=4
@@ -77,7 +79,7 @@ let g:lsp_diagnostics_highlights_enabled = 1
 let g:lsp_diagnostics_highlights_insert_mode_enabled = 1
 let g:lsp_diagnostics_virtual_text_insert_mode_enabled = 1
 let g:lsp_diagnostics_virtual_text_align = "right"
-let g:lsp_diagnostics_virtual_text_prefix = "⚠  "
+let g:lsp_diagnostics_virtual_text_prefix = " ⚠  "
 
 " let g:ale_sign_error = '✖'
 " let g:ale_sign_warning = '⚠️ '
@@ -92,4 +94,5 @@ nnoremap <leader>j :term<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>h :noh<CR>
+nnoremap <leader>s :w<CR>
 "nnoremap <leader>l :highlight ALEVirtualTextError ctermbg=darkred<CR>
