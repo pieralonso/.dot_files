@@ -18,6 +18,7 @@ syntax on
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }"Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'joshdick/onedark.vim'
 Plug 'mattn/emmet-vim'
@@ -33,7 +34,6 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -81,15 +81,14 @@ let g:lsp_diagnostics_virtual_text_insert_mode_enabled = 1
 let g:lsp_diagnostics_virtual_text_align = "right"
 let g:lsp_diagnostics_virtual_text_prefix = " ⚠  "
 
-" let g:ale_sign_error = '✖'
-" let g:ale_sign_warning = '⚠️ '
 let g:airline_theme='onedark'
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
 colorscheme habamax
+imap <script><silent><nowait><expr> <C-g> codeium#Accept()
 hi Normal guibg=NONE ctermbg=NONE
+
 nnoremap <leader>j :term<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
