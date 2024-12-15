@@ -7,7 +7,7 @@ return {
 
 		configs.setup({
 			ensure_installed = { "c", "lua", "vim", "vimdoc",
-                "typescript", "query","javascript", "html", "css", "astro", "tsx" },
+                "typescript", "query","javascript", "html", "css", "astro", "tsx", "python" },
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },

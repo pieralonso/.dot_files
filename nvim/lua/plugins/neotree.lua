@@ -9,7 +9,7 @@ return {
     },
     config  = function()
 		vim.keymap.set('n', '<leader>e',function()
-            vim.cmd('Neotree float')
+            vim.cmd('Neotree toggle')
         end
         )
     end

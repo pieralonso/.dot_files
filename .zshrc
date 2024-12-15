@@ -9,7 +9,7 @@ unsetopt autocd
 zstyle :compinstall filename '/home/pieralonso/.zshrc'
 export PATH="$PATH:/opt/nvim/"
 alias ls='ls --color=auto'
-export LS_COLORS="di=33:fi=36"
+export LS_COLORS="di=36:fi=37"
 
 autoload -Uz compinit
 compinit
