@@ -1,8 +1,8 @@
-echo "Copiando el archivo .vimrc a la carpeta de git"
+echo "Copiando archivos..."
 cp ~/.vimrc ./
+echo ".vimrc copiado"
 cp ~/.zshrc ./
+echo ".zshrc copiado"
 cp -r ~/.config/nvim ./
-git add --all
-git commit -m "$1"
-git push origin main
-echo "Script ejecutado con exito"
+echo "Directorio de nvim copiado"
+echo "Archivos copiados con exito"
