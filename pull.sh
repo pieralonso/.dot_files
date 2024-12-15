@@ -1,7 +1,8 @@
 echo "Ejecutando script..."
-echo "Obteniendo archivo de git "
+echo "Obteniendo archivos de git"
 git pull origin main
 echo "Copiando el archivo a la ruta principal " 
 cp .vimrc ~/
 cp .zshrc ~/
-echo "Archivo copiado con exito"
+cp -r nvim ~/.config
+echo "Archivos copiado con exito"
