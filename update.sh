@@ -7,6 +7,6 @@ cp -r ~/.config/nvim ./
 echo "Directorio de nvim copiado"
 echo "Archivos copiados con exito"
 
-git add . && git commit -m "{$1}"
+git add . && git commit -m "$1"
 git push origin main
 
