@@ -10,7 +10,7 @@ return {
                 hide_nc_statusline = false,
                 hide_end_of_buffer = false,
                 inverse = {
-                    match_paren = false,
+                    match_paren = true,
                     visual = false,
                     search = true,
                 },
@@ -20,11 +20,6 @@ return {
                     },
                 },
             },
-            groups = {
-                all = {
-                    ['@label.jsonc'] = { link = '@label.json' },
-                },
-            },
             -- ...
         })
 
@@ -32,6 +27,3 @@ return {
         vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
     end,
 }
-
-
-

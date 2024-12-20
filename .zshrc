@@ -24,4 +24,11 @@ zstyle ':vcs_info:git:*' formats '⋌ %b '
 
 setopt PROMPT_SUBST
 NEWLINE=$'\n'
-PROMPT='${NEWLINE}%F{green}%T%f %F{yellow}%~%f %F{red}${vcs_info_msg_0_}%f ${NEWLINE}%F{cyan}〉%f'
+PROMPT='${NEWLINE}%F{green}%T%f %F{cyan}%~%f %F{red}${vcs_info_msg_0_}%f ${NEWLINE}%F{yellow}〉%f'
+
+# fnm
+FNM_PATH="/home/pieralonso/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/pieralonso/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
