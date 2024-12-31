@@ -10,7 +10,7 @@ return {
                 hide_nc_statusline = false,
                 hide_end_of_buffer = false,
                 inverse = {
-                    match_paren = true,
+                    match_paren = false,
                     visual = false,
                     search = true,
                 },

@@ -2,7 +2,12 @@ return {
     {
         'williamboman/mason.nvim',
         lazy = false,
-        opts = {},
+        opts = {
+            ensure_installed = {
+                -- ...elided others
+                "graphql-language-service-cli", -- required for graphql-lsp
+            },
+        },
     },
 
     -- Autocompletion
@@ -81,6 +86,7 @@ return {
                 ensure_installed = {
                     'lua_ls',
                     'ts_ls',
+                    'graphql',
                     'tailwindcss',
                     'cssls',
                     'html',

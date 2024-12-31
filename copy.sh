@@ -4,6 +4,6 @@ cp .vimrc ~/
 echo ".vimrc copiado"
 cp .zshrc ~/
 echo ".zshrc copiado"
-cp -r nvim ~/.config
+cp -r nvim ~/.config/
 echo "Directorio de nvim copiado"
 echo "Archivos copiado con exito"
