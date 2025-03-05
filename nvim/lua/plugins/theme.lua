@@ -23,7 +23,7 @@ return {
             -- ...
         })
 
-        vim.cmd('colorscheme github_dark_dimmed')
-        vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+        vim.cmd('colorscheme github_dark_default')
     end,
 }
+

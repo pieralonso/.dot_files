@@ -14,8 +14,11 @@ vim.o.ignorecase = true         -- "set ignorecase"
 vim.o.showmatch = true          -- "set showmatch"
 vim.o.hlsearch = true           -- "set hlsearch"
 vim.o.syntax = "on"             -- "syntax on"
+vim.o.wrap = false
+vim.opt.fillchars:append({ eob = " " })
 
 
 
 vim.keymap.set('n', '<leader>s', vim.cmd.w)
 vim.keymap.set('n', '<Esc>', vim.cmd.noh)
+vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
