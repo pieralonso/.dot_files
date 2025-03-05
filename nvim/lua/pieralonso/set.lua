@@ -22,3 +22,4 @@ vim.opt.fillchars:append({ eob = " " })
 vim.keymap.set('n', '<leader>s', vim.cmd.w)
 vim.keymap.set('n', '<Esc>', vim.cmd.noh)
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+vim.g.astro_typescript = 'enable'
